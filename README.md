@@ -6,15 +6,30 @@ The purpose of this analysis is to review a dataset pertaining to weather condit
 
 In order to explore the data in the SQLite database, we used SQLAlchemy to connect and generate queries to pull the necessary information needed for our analysis. Throughout this module, we used Jupyter notebook to import dependencies and create the commands to pull the data from the SQLite database.
 
+## Resources
+
+### Data Source
+
+[SQLite file: hawaii.sqlite](https://github.com/doliver231/surfs_up/blob/main/hawaii.sqlite), [Jupyter Notebook Challenge file](https://github.com/doliver231/surfs_up/blob/main/SurfsUp_Challenge.ipynb)
+
+### Software
+
+* Flask (ver 2.2.2)
+* SQLAlchemy (ver 1.4.44)
+* Jupyter Notebook
+
 ## Analysis
 
 Here are some of the dependencies and modules used on Jupyter Notebook:
 
 ```py
+import pandas as pd
+import datetime as dt
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, inspect, extract
+from flask import Flask, jsonify
 ```
 
 Using SQLAlchemy Object Relational Mapper (ORM) to begin our query from SQLite database:
@@ -49,11 +64,43 @@ dec_df = dec_df.sort_index()
 dec_df.describe()
 ```
 
-![June Temps Stats]()
-![December Temps Stats]()
+![June Temps Stats](https://github.com/doliver231/surfs_up/blob/main/Images/Temps_in_June_Stats.png)
+![December Temps Stats](https://github.com/doliver231/surfs_up/blob/main/Images/Temps_in_December_Stats.png)
 
+We also used Visual Studio Code to create Python applications to share the results via a webpage by creating routes and using Terminal to run the `Flask` app. The Terminal generated the routes in a web address http://127.0.0.1:5000 that could be shared. Here is a snippet of the `Flask` application created ([app.py](https://github.com/doliver231/surfs_up/blob/main/app.py)):
 
+```py
+app = Flask(__name__)
+@app.route("/")
+def welcome():
+    return(
+    '''
+     Welcome to the Climate Analysis API!<br/>
+    Available Routes:<br/>
+    /api/v1.0/precipitation<br/>
+    /api/v1.0/stations<br/>
+    /api/v1.0/tobs<br/>
+    /api/v1.0/temp/start/end<br/>
+    ''')
+@app.route("/api/v1.0/precipitation")
+def precipitation():
+   prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
+   precipitation = session.query(Measurement.date, Measurement.prcp).\
+    filter(Measurement.date >= prev_year).all()
+   precip = {date: prcp for date, prcp in precipitation}
+   return jsonify(precip)
 
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+Here is the output on Integrated Terminal on VS Code:
+
+![Terminal Flask]()
+
+The generated webpage when opened:
+
+![Flask webpage]()
 
 
 
