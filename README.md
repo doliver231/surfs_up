@@ -10,7 +10,9 @@ In order to explore the data in the SQLite database, we used SQLAlchemy to conne
 
 ### Data Source
 
-[SQLite file: hawaii.sqlite](https://github.com/doliver231/surfs_up/blob/main/hawaii.sqlite), [Jupyter Notebook Challenge file](https://github.com/doliver231/surfs_up/blob/main/SurfsUp_Challenge.ipynb)
+[SQLite file: hawaii.sqlite](https://github.com/doliver231/surfs_up/blob/main/hawaii.sqlite), 
+[Jupyter Notebook Challenge file](https://github.com/doliver231/surfs_up/blob/main/SurfsUp_Challenge.ipynb),
+[Flask Python file: app.py](https://github.com/doliver231/surfs_up/blob/main/app.py)
 
 ### Software
 
@@ -96,17 +98,10 @@ if __name__ == '__main__':
 
 Here is the output on Integrated Terminal on VS Code:
 
-![Terminal Flask]()
+![Terminal Flask](https://github.com/doliver231/surfs_up/blob/main/Images/Flask_terminal.png)
 
 The generated webpage when opened:
 
-![Flask webpage]()
+![Flask webpage](https://github.com/doliver231/surfs_up/blob/main/Images/Flask_webpage.png)
 
-
-
-
-
-There is a bulleted list that addresses the three key differences in weather between June and December. (6 pt)
-Summary:
-
-There is a high-level summary of the results and there are two additional queries to perform to gather more weather data for June and December. (5 pt)
+## Summary
