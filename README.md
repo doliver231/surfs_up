@@ -104,4 +104,16 @@ The generated webpage when opened:
 
 ![Flask webpage](https://github.com/doliver231/surfs_up/blob/main/Images/Flask_webpage.png)
 
-## Summary
+## Summary of Results
+
+Regardless of the year, the key differences/similarities in weather between June and December:
+
+* The average temperature is in the 70's for both months; temperature does not have major fluctuations throughout the year.
+* Although similar statistics, the temperatures in December are slighly below those of June, whether it is the average, minimum, and maximum.
+* The standard deviation of the average temperature for December is slightly higher than of June.
+
+If we do an additional query and add precipation results for both June and December, our output shows the following:
+
+![June Stats Prcp]()
+![December Stats Prcp]()
+
