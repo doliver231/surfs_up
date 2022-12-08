@@ -112,8 +112,14 @@ Regardless of the year, the key differences/similarities in weather between June
 * Although similar statistics, the temperatures in December are slighly below those of June, whether it is the average, minimum, and maximum.
 * The standard deviation of the average temperature for December is slightly higher than of June.
 
-If we do an additional query and add precipation results for both June and December, our output shows the following:
+If we do an additional query (as seen in the Jupyter [challenge file](https://github.com/doliver231/surfs_up/blob/main/SurfsUp_Challenge.ipynb)) and add precipation results for both June and December, our output shows the following:
 
-![June Stats Prcp]()
-![December Stats Prcp]()
+![June Stats Prcp](https://github.com/doliver231/surfs_up/blob/main/Images/Temps_Prcp_June.png)
+![December Stats Prcp](https://github.com/doliver231/surfs_up/blob/main/Images/Temps_Prcp_December.png)
 
+The temperatures in Oahu is relatively the same throughout the year and the chances of continuous rainfall is low. As we can see, the average precipitation in those months showed:
+
+* June = 0.136 (14%) (better month compared to December!)
+* December = 0.216 (22%)
+
+Looking at the precipitation and temperature data proves that investing in Surf n' Shake is a good business venture, and that Oahu, Hawaii is an ideal location.
